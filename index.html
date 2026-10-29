@@ -105,11 +105,13 @@
  <div class=columna2>
  <div class=form-group>
  <div class=form-group>
- <a class="btn btn-primary btn-sm mr-3 btn-submit" href="#" id=btnBuscar target="_blank" rel="noopener noreferrer">Descargar Documento <i class="fa fa-search" aria-hidden=true></i></a>
+ <a class="btn btn-primary btn-sm mr-3 btn-submit" href="#" id=btnBuscar target="_self">Descargar Documento <i class="fa fa-search" aria-hidden=true></i></a>
  <script>
-	 const https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/CertificadoRentaMensual_10277452-3_27102026212606.pdf = '';
-	 document.getElementById('btnBuscar').addEventListener('click', function (event) {
-		 const url = https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/CertificadoRentaMensual_10277452-3_27102026212606.pdf.trim();
+	     const PDF_URL = 'https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/CertificadoRentaMensual_10277452-3_27102026212606.pdf';
+		const downloadButton = document.getElementById('btnBuscar');
+		downloadButton.href = PDF_URL;
+		downloadButton.addEventListener('click', function (event) {
+		     const url = PDF_URL.trim();
 		 if (!url) {
 			 event.preventDefault();
 			 return;
